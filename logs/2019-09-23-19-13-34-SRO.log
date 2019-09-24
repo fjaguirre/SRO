@@ -1,0 +1,13 @@
+[INFO] -  * Running on http://0.0.0.0:5005/ (Press CTRL+C to quit)
+[INFO] - [-] Saying Hello!
+[INFO] - 127.0.0.1 - - [23/Sep/2019 19:10:14] "GET / HTTP/1.1" 200 -
+[INFO] - [-] Saying Hello!
+[INFO] - 127.0.0.1 - - [23/Sep/2019 19:10:16] "GET / HTTP/1.1" 200 -
+[INFO] - [-] Saying Hello!
+[INFO] - 127.0.0.1 - - [23/Sep/2019 19:10:17] "GET / HTTP/1.1" 200 -
+[INFO] - [-] Saying Hello!
+[INFO] - 127.0.0.1 - - [23/Sep/2019 19:10:19] "GET / HTTP/1.1" 200 -
+[INFO] - [-] Saying Hello!
+[INFO] - 127.0.0.1 - - [23/Sep/2019 19:10:20] "GET / HTTP/1.1" 200 -
+[INFO] - [-] Exit SRO.
+[INFO] - 127.0.0.1 - - [23/Sep/2019 19:13:34] "GET /bye HTTP/1.1" 200 -

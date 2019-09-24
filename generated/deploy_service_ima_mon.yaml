@@ -1,0 +1,65 @@
+slice:
+  description: Slicing for Elastic IoT Service
+  id: IoTService_sliced
+  name: IoTService_sliced
+  short-name: IoTService_sliced
+  slice-parts:
+  - dc-slice-part:
+      dc-slice-part-id:
+        slice-controller-id: 2
+        slice-part-uuid: 154
+      monitoring-parameters:
+        granularity-secs: 10
+        measurements-db-ip: 143.106.11.131
+        measurements-db-port: 20154
+        metrics:
+        - metric:
+            name: PERCENT_CPU_UTILIZATION
+        - metric:
+            name: MEGABYTES_MEMORY_UTILIZATION
+        - metric:
+            name: TOTAL_BYTES_DISK_IN
+        - metric:
+            name: TOTAL_BYTES_DISK_OUT
+        - metric:
+            name: TOTAL_BYTES_NET_RX
+        - metric:
+            name: TOTAL_BYTES_NET_TX
+        namespace: dojot
+        tool: netdata
+        type: host
+      name: dc-slice1
+      type: DC
+  - dc-slice-part:
+      dc-slice-part-id:
+        slice-controller-id: 5
+        slice-part-uuid: 105
+      monitoring-parameters:
+        granularity-secs: 10
+        measurements-db-ip: 10.1.0.3
+        measurements-db-port: 19105
+        metrics:
+        - metric:
+            name: PERCENT_CPU_UTILIZATION
+        - metric:
+            name: MEGABYTES_MEMORY_UTILIZATION
+        - metric:
+            name: TOTAL_BYTES_DISK_IN
+        - metric:
+            name: TOTAL_BYTES_DISK_OUT
+        - metric:
+            name: TOTAL_BYTES_NET_RX
+        - metric:
+            name: TOTAL_BYTES_NET_TX
+        namespace: dojot
+        tool: prometheus
+        type: host
+      name: dc-slice2
+      type: EDGE
+  slice-timeframe:
+    service-start-time:
+      '100919': 10 pm
+    service-stop-time:
+      '101019': 10 pm
+  vendor: dojot
+  version: '1.0'

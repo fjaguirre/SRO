@@ -1,0 +1,45 @@
+elasticity:
+  slice:
+    id: IoTService_sliced
+    slice-parts:
+    - dc-slice-part:
+        VIM:
+          name: KUBERNETES
+          vdus:
+          - vdu:
+              description: Compute node of kubernetes cluster
+              epa-attributes:
+                host-epa:
+                  cpu-architecture: X86_64
+                  cpu-number: 4
+                  host-image: undefined
+                  memory-mb: 32768
+                  os-properties:
+                    architecture: x86_64
+                    distribution: ubuntu
+                    type: linux
+                    version: 18.04
+                  storage-gb: 500
+              hosting: SHARED
+              id: k8s-node-2-5-105
+              instance-count: 1
+              ip: 10.10.5.3
+              name: k8s-node-2-5-105
+              type: worker
+              vdu-image: k8s-dojot-min-template
+          vim-credential:
+            password-ssh: necos
+            user-ssh: root
+          vim-ref:
+            ip-api: 10.1.0.3
+            ip-ssh: 10.1.0.3
+            port-api: 21105
+            port-ssh: 22105
+          vswitch:
+            bridge-name: br_105
+            type: openvswitch
+        dc-slice-part-id:
+          slice-controller-id: 5
+          slice-part-uuid: 105
+        name: dc-slice2
+  type: upgrade

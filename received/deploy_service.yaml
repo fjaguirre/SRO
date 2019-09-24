@@ -1,0 +1,49 @@
+slices:
+  sliced:
+    id: IoTService_sliced
+    slice-parts:
+    - dc-slice-part: null
+      name: dc-slice1
+      vdus:
+      - VIM: Kubernetes
+        commands:
+        - git clone https://github.com/LABORA-INF-UFG/NECOS-ansible-dojot-core.git
+        - export DEBIAN_FRONTEND=noninteractive; apt-get update; apt install -y python-pip
+        - pip install -r NECOS-ansible-dojot-core/requirements.txt
+        - sed -i "s/REPLACE/$coreip/" NECOS-ansible-dojot-core/inventories/example_local/group_vars/dojot-k8s/dojot.yaml
+        - ansible-playbook -c local -b -i NECOS-ansible-dojot-core/inventories/example_local/ NECOS-ansible-dojot-core/deploy.yaml > dojot.log
+        name: k8s-master-1-2-154
+        namespace: dojot
+        vdu: null
+    - dc-slice-part: null
+      elasticity:
+      - rule:
+          metric-collector:
+            granularity: default
+            metric-name: PERCENT_CPU_UTILIZATION
+            node-type: worker
+          name: IoT_Agent_CPU_overhead
+          operator: '>'
+          post-deployment:
+          - action:
+              commands:
+              - REPLICAS="$(kubectl get pods -l name=iotagent-mosca -n dojot --no-headers | wc -l)"; kubectl scale deployment iotagent-mosca --replicas $((REPLICAS+=1)) -n dojot
+              description: Increment the number of replicas of IoT-Agent containers, so the new worker can host the new replica
+              node: master
+          trigger:
+            points: 3
+          type: upgrade
+          unit: pct
+          value: 80
+      name: dc-slice2
+      vdus:
+      - VIM: Kubernetes
+        commands:
+        - git clone https://github.com/LABORA-INF-UFG/NECOS-ansible-dojot-edge.git
+        - export DEBIAN_FRONTEND=noninteractive; apt-get update; apt install -y python-pip
+        - pip install -r NECOS-ansible-dojot-edge/requirements.txt
+        - sed -i "s/REPLACE/10.10.2.1/" NECOS-ansible-dojot-edge/inventories/example_local/group_vars/dojot-k8s/dojot.yaml
+        - ansible-playbook -c local -b -i NECOS-ansible-dojot-edge/inventories/example_local/ NECOS-ansible-dojot-edge/deploy.yaml > dojot.log
+        name: k8s-master-1-5-105
+        namespace: dojot
+        vdu: null

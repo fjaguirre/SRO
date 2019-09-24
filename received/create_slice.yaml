@@ -1,0 +1,276 @@
+slices:
+  sliced:
+    cost:
+      dc-model:
+        model: COST_PER_PHYSICAL_MACHINE_PER_DAY
+        value-euros:
+          lower_than_equal: 10
+      net-model:
+        model: COST_PER_LINK_PER_DAY
+        value-euros:
+          lower_than_equal: 50
+    description: Slicing for Elastic IoT Service
+    id: IoTService_sliced
+    logo: dojot.png
+    name: IoTService_sliced
+    short-name: IoTService_sliced
+    slice-constraints:
+      dc-slice-parts: 1
+      edge-slice-parts: 1
+      geographic:
+      - BRAZIL
+      - EUROPE
+      net-slice-parts: 1
+    slice-lifecycle:
+      description: lifecycle status
+      status: construction
+    slice-parts:
+    - dc-slice-part:
+        VIM:
+          host-count: 1
+          name: KUBERNETES
+          vdus:
+          - vdu:
+              description: Master (controller) of kubernetes cluster
+              epa-attributes:
+                host-epa:
+                  cpu-architecture: X86_64
+                  cpu-number: 4
+                  host-image: indefined
+                  memory-mb: 8192
+                  os-properties:
+                    architecture: x86_64
+                    distribution: ubuntu
+                    type: linux
+                    version: 18.04
+                  storage-gb: 100
+              hosting: SHARED
+              id: k8s-master-1-2-154
+              instance-count: 1
+              ip: 10.10.2.1
+              name: k8s-master-1-2-154
+              type: master
+              vdu-image: k8s-dojot-template
+          - vdu:
+              description: Compute node of kubernetes cluster
+              epa-attributes:
+                host-epa:
+                  cpu-architecture: X86_64
+                  cpu-number: 8
+                  host-image: undefined
+                  memory-mb: 32768
+                  os-properties:
+                    architecture: x86_64
+                    distribution: ubuntu
+                    type: linux
+                    version: 18.04
+                  storage-gb: 500
+              hosting: SHARED
+              id: k8s-node-1-2-154
+              instance-count: 2
+              ip: 10.10.2.2
+              name: k8s-node-1-2-154
+              type: worker
+              vdu-image: k8s-dojot-template
+          - vdu:
+              description: Compute node of kubernetes cluster
+              epa-attributes:
+                host-epa:
+                  cpu-architecture: X86_64
+                  cpu-number: 8
+                  host-image: undefined
+                  memory-mb: 32768
+                  os-properties:
+                    architecture: x86_64
+                    distribution: ubuntu
+                    type: linux
+                    version: 18.04
+                  storage-gb: 500
+              hosting: SHARED
+              id: k8s-node-2-2-154
+              instance-count: 2
+              ip: 10.10.2.3
+              name: k8s-node-2-2-154
+              type: worker
+              vdu-image: k8s-dojot-template
+          version: undefined
+          vim-credential:
+            password-ssh: necos
+            user-ssh: root
+          vim-federated: false
+          vim-ref:
+            ip-api: 143.106.11.131
+            ip-ssh: 143.106.11.131
+            port-api: 21154
+            port-ssh: 22154
+          vim-shared: false
+          vswitch:
+            bridge-name: br_154
+            type: openvswitch
+        cost:
+          model: COST_PER_PHYSICAL_MACHINE_PER_DAY
+          value-euros: 30
+        dc-slice-controller:
+          controller-id: '2'
+          ip: necos.dca.fee.unicamp.br
+          port: '5000'
+        dc-slice-part-id:
+          slice-controller-id: '2'
+          slice-part-uuid: '154'
+        monitoring-parameters:
+          granularity-secs: 10
+          measurements-db-ip: 143.106.11.131
+          measurements-db-port: 20154
+          metrics:
+          - metric:
+              name: PERCENT_CPU_UTILIZATION
+          - metric:
+              name: MEGABYTES_MEMORY_UTILIZATION
+          - metric:
+              name: TOTAL_BYTES_DISK_IN
+          - metric:
+              name: TOTAL_BYTES_DISK_OUT
+          - metric:
+              name: TOTAL_BYTES_NET_RX
+          - metric:
+              name: TOTAL_BYTES_NET_TX
+          tool: netdata
+          type: host
+        name: dc-slice1
+        type: DC
+    - dc-slice-part:
+        VIM:
+          host-count: 1
+          name: KUBERNETES
+          vdus:
+          - vdu:
+              description: Master (controller) of kubernetes cluster
+              epa-attributes:
+                host-epa:
+                  cpu-architecture: X86_64
+                  cpu-number: 4
+                  host-image: indefined
+                  memory-mb: 8192
+                  os-properties:
+                    architecture: x86_64
+                    distribution: ubuntu
+                    type: linux
+                    version: 18.04
+                  storage-gb: 100
+              hosting: SHARED
+              id: k8s-master-1-5-105
+              instance-count: 1
+              ip: 10.10.5.1
+              name: k8s-master-1-5-105
+              type: master
+              vdu-image: k8s-dojot-template
+          - vdu:
+              description: Compute node of kubernetes cluster
+              epa-attributes:
+                host-epa:
+                  cpu-architecture: X86_64
+                  cpu-number: 4
+                  host-image: undefined
+                  memory-mb: 32768
+                  os-properties:
+                    architecture: x86_64
+                    distribution: ubuntu
+                    type: linux
+                    version: 18.04
+                  storage-gb: 500
+              hosting: SHARED
+              id: k8s-node-1-5-105
+              instance-count: 1
+              ip: 10.10.5.2
+              name: k8s-node-1-5-105
+              type: worker
+              vdu-image: k8s-dojot-min-template
+          version: undefined
+          vim-credential:
+            password-ssh: necos
+            user-ssh: root
+          vim-federated: false
+          vim-ref:
+            ip-api: 10.1.0.3
+            ip-ssh: 10.1.0.3
+            port-api: 21105
+            port-ssh: 22105
+          vim-shared: false
+          vswitch:
+            bridge-name: br_105
+            type: openvswitch
+        cost:
+          model: COST_PER_PHYSICAL_MACHINE_PER_DAY
+          value-euros: 50
+        dc-slice-controller:
+          controller-id: '5'
+          ip: 143.106.11.131
+          port: '5001'
+        dc-slice-part-id:
+          slice-controller-id: '5'
+          slice-part-uuid: '105'
+        monitoring-parameters:
+          granularity-secs: 10
+          measurements-db-ip: 10.1.0.3
+          measurements-db-port: 19105
+          metrics:
+          - metric:
+              name: PERCENT_CPU_UTILIZATION
+          - metric:
+              name: MEGABYTES_MEMORY_UTILIZATION
+          - metric:
+              name: TOTAL_BYTES_DISK_IN
+          - metric:
+              name: TOTAL_BYTES_DISK_OUT
+          - metric:
+              name: TOTAL_BYTES_NET_RX
+          - metric:
+              name: TOTAL_BYTES_NET_TX
+          tool: prometheus
+          type: host
+        name: dc-slice2
+        type: EDGE
+    - net-slice-part:
+        WIM:
+          name: VXLAN
+          version: 1.0
+          wim-federated: false
+          wim-ref: undefined
+          wim-shared: true
+        cost:
+          model: COST_PER_LINK_PER_DAY
+          value-euros: 50
+        link-ends:
+          link-end1-ip: undefined
+          link-end2-ip: undefined
+        links:
+        - dc-part1:
+            dc-slice-controller-id: '2'
+            slice-part-uuid: '154'
+        - dc-part2:
+            dc-slice-controller-id: '5'
+            slice-part-uuid: '105'
+        - requirements:
+            bandwidth-GB: teste
+        name: pop-dc-slice1-to-pop-dc-slice2
+        net-slice-part-id:
+          slice-controller-id: 9
+          slice-part-uuid: 43
+        type: NET
+        wan-slice-controller:
+          controller-id: '9'
+          ip: necos.dca.fee.unicamp.br
+          port: '4000'
+    slice-requirements:
+      elasticity: true
+      reliability:
+        description: reliability level
+        enabled: true
+        value: none
+    slice-timeframe:
+      service-start-time:
+        100919: 10 pm
+      service-stop-time:
+        101019: 10 pm
+    vendor: dojot
+    version: '1.0'

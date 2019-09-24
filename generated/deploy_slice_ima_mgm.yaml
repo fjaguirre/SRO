@@ -1,0 +1,64 @@
+slice:
+  id: IoTService_sliced
+  slice-parts:
+  - dc-slice-part:
+      VIM:
+        name: KUBERNETES
+        vdus:
+        - vdu:
+            description: Compute node of kubernetes cluster
+            id: k8s-node-2-2-154
+            ip: 10.10.2.3
+            name: k8s-node-2-2-154
+            type: worker
+            vdu-image: k8s-dojot-template
+        - vdu:
+            description: Compute node of kubernetes cluster
+            id: k8s-node-1-2-154
+            ip: 10.10.2.2
+            name: k8s-node-1-2-154
+            type: worker
+            vdu-image: k8s-dojot-template
+        - vdu:
+            description: Master (controller) of kubernetes cluster
+            id: k8s-master-1-2-154
+            ip: 10.10.2.1
+            name: k8s-master-1-2-154
+            type: master
+            vdu-image: k8s-dojot-template
+        vim-credential:
+          password-ssh: necos
+          user-ssh: root
+        vim-ref:
+          ip-api: 143.106.11.131
+          ip-ssh: 143.106.11.131
+          port-api: 21154
+          port-ssh: 22154
+      name: dc-slice1
+  - dc-slice-part:
+      VIM:
+        name: KUBERNETES
+        vdus:
+        - vdu:
+            description: Compute node of kubernetes cluster
+            id: k8s-node-1-5-105
+            ip: 10.10.5.2
+            name: k8s-node-1-5-105
+            type: worker
+            vdu-image: k8s-dojot-min-template
+        - vdu:
+            description: Master (controller) of kubernetes cluster
+            id: k8s-master-1-5-105
+            ip: 10.10.5.1
+            name: k8s-master-1-5-105
+            type: master
+            vdu-image: k8s-dojot-template
+        vim-credential:
+          password-ssh: necos
+          user-ssh: root
+        vim-ref:
+          ip-api: 10.1.0.3
+          ip-ssh: 10.1.0.3
+          port-api: 21105
+          port-ssh: 22105
+      name: dc-slice2
