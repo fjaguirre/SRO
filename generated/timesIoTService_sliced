@@ -1,33 +1,17 @@
 [*] Create Slice
-   - Slices Database: 1222.6266860961914 ms.
-   - IMA.monitoring: 17816.744565963745 ms.
-   - IMA.management: 1932.1889877319336 ms.
-[-] Total time for slice creation: 20988.680362701416 ms.
+   - Slices Database: 570.0647830963135 ms.
+   - IMA.management: 3541.043281555176 ms.
+[-] Total time for slice creation: 4127.795219421387 ms.
+[*] Service deployment
+   - Save elasticity policies and start elasticity agents: 153.63502502441406 ms.
+[-] Total time for service deployment: 331.39538764953613 ms.
 [*] Service deployment
 [*] Service deployment
-   - IMA.management: 111933.24375152588 ms.
-   - IMA.monitoring: 238.9848232269287 ms.
-   - Save elasticity policies and start elasticity agents: 161.14282608032227 ms.
-[-] Total time for service deployment: 112374.37415122986 ms.
+   - IMA.monitoring: 242.1867847442627 ms.
+   - Save elasticity policies and start elasticity agents: 98.9232063293457 ms.
+[-] Total time for service deployment: 508.3651542663574 ms.
 [*] Vertical elasticity
-   - DC Controller: 396937.2982978821 ms.
-   - Slices Database: 74.63932037353516 ms.
-   - IMA.management: 34668.65587234497 ms.
-[*] Total time for vertical elasticity: 431800.9104728699 ms.
-[*] Vertical elasticity
-   - DC Controller: 649987.6470565796 ms.
-   - Slices Database: 77.28314399719238 ms.
-   - IMA.management: 34679.107904434204 ms.
-[*] Total time for vertical elasticity: 684838.6557102203 ms.
-[*] Service deployment
-   - Save elasticity policies and start elasticity agents: 94.81573104858398 ms.
-[-] Total time for service deployment: 127.52056121826172 ms.
-[*] Vertical elasticity
-   - DC Controller: 18194.371461868286 ms.
-[*] Total time for vertical elasticity: 18296.40293121338 ms.
-[*] Service deployment
-   - Save elasticity policies and start elasticity agents: 75.94704627990723 ms.
-[-] Total time for service deployment: 112.49732971191406 ms.
-[*] Vertical elasticity
-   - DC Controller: 762247.8761672974 ms.
-   - Slices Database: 40.958404541015625 ms.
+   - DC Controller: 370214.08128738403 ms.
+   - Slices Database: 89.42914009094238 ms.
+   - IMA.management: 34733.95395278931 ms.
+[*] Total time for vertical elasticity: 465160.10785102844 ms.

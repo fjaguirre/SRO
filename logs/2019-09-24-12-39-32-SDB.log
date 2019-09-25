@@ -1,0 +1,4 @@
+[INFO] -  * Running on http://0.0.0.0:5006/ (Press CTRL+C to quit)
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:32:53] "GET /necos/db/slices/exists/IoTService_sliced HTTP/1.1" 200 -
+[INFO] - [-] Exit Slices Database.
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:39:32] "GET /bye HTTP/1.1" 200 -

@@ -1,0 +1,3 @@
+[INFO] -  * Running on http://0.0.0.0:5006/ (Press CTRL+C to quit)
+[INFO] - [-] Exit Slices Database.
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:43:50] "GET /bye HTTP/1.1" 200 -

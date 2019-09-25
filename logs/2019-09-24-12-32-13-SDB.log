@@ -1,0 +1,37 @@
+[INFO] -  * Running on http://0.0.0.0:5006/ (Press CTRL+C to quit)
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:14] "GET /necos/db/slices/exists/IoTService_sliced HTTP/1.1" 200 -
+[INFO] - Elasticity policy added to 'IoTService_sliced.dc-slice2'
+[INFO] - Action added to the elasticity policy.
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:14] "POST /necos/db/IoTService_sliced/dc-slice2/elasticity_rule HTTP/1.1" 201 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:15] "GET /necos/db/slice_part_ids/IoTService_sliced/dc HTTP/1.1" 200 -
+[INFO] - There is not a policy in this slice part. 'NoneType' object has no attribute 'data'
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:15] "GET /necos/db/IoTService_sliced/2-163/elasticity HTTP/1.1" 404 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:15] "GET /necos/db/IoTService_sliced/5-113/elasticity HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:15] "GET /necos/db/IoTService_sliced/5-113/monitor/granularity HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:15] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:15] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:25] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:35] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:45] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:28:55] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:29:05] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:29:15] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:29:25] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:29:35] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:29:45] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:29:55] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:30:05] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:30:15] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:30:25] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:30:35] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:30:46] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:30:56] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:31:06] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:31:16] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:31:26] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:31:36] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:31:46] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:31:56] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:32:06] "GET /necos/db/IoTService_sliced/5-113/vdus HTTP/1.1" 200 -
+[INFO] - [-] Exit Slices Database.
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:32:13] "GET /bye HTTP/1.1" 200 -

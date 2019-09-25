@@ -1,0 +1,33 @@
+[INFO] -  * Running on http://0.0.0.0:5005/ (Press CTRL+C to quit)
+[INFO] - [-] Performing "Service Deployment"
+[INFO] -     - Checking if slice "IoTService_sliced" exists
+[INFO] -     - Looking for elasticity policies.
+[INFO] -        - 1 elasticity policies saved.
+[INFO] - 172.100.100.111 - - [24/Sep/2019 12:28:14] "POST /necos/sro/deploy_service HTTP/1.1" 200 -
+[INFO] - [*] Elasticity agent 'IoT_Agent_CPU_overhead' started.
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['17.46', '26.8', '27']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['17.46', '26.8', '27']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['24.2', '17.46', '26.8']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['17.2', '24.2', '17.46']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['17.2', '24.2', '17.46']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['27.6', '17.2', '24.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['26', '27.6', '17.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['26', '27.6', '17.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['16.2', '26', '27.6']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['27.58', '16.2', '26']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['15.6', '27.58', '16.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['15.6', '27.58', '16.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['25.8', '15.6', '27.58']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['16.2', '25.8', '15.6']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['16.2', '25.8', '15.6']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['31.2', '16.2', '25.8']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['16.8', '31.2', '16.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['16.8', '31.2', '16.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['25.8', '16.8', '31.2']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['27.11', '25.8', '16.8']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['27.11', '25.8', '16.8']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['16', '27.11', '25.8']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['25.2', '16', '27.11']
+[INFO] -  + Elasticity agent 'IoT_Agent_CPU_overhead' | k8s-node-1-5-113 - points: ['18.6', '25.2', '16']
+[INFO] - [-] Exit SRO.
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:32:13] "GET /bye HTTP/1.1" 200 -

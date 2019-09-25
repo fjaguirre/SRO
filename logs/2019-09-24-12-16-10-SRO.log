@@ -1,0 +1,15 @@
+[INFO] -  * Running on http://0.0.0.0:5005/ (Press CTRL+C to quit)
+[INFO] - [-] Performing "Slice Creation"
+[INFO] -     - Saving slice in Slices Database
+[INFO] -     - Registering slice at IMA (monitoring)
+[INFO] -         - Generating YAML
+[INFO] -         - Calling IMA (monitoring)
+[INFO] -         - Response | Status code[201]: {'Created': 'Monitoring Successfully Created'}...
+[INFO] -     - Registering slice at IMA (management)
+[INFO] -         - Generating YAML
+[INFO] -         - Calling IMA (management)
+[INFO] -         - Response | Status code[200]: {'IoTService_sliced': {}}...
+[INFO] - [-] Slice 'IoTService_sliced' was correctly saved. It is now monitored and managed by IMA.
+[INFO] - 172.100.100.111 - - [24/Sep/2019 12:06:37] "POST /necos/sro/slices/req_e2e_binding HTTP/1.1" 201 -
+[INFO] - [-] Exit SRO.
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:16:10] "GET /bye HTTP/1.1" 200 -

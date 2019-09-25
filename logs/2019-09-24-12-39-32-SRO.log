@@ -1,0 +1,7 @@
+[INFO] -  * Running on http://0.0.0.0:5005/ (Press CTRL+C to quit)
+[INFO] - [-] Performing "Service Deployment"
+[INFO] -     - Checking if slice "IoTService_sliced" exists
+[INFO] -     - Generating YAML for IMA.management
+[INFO] -     - Calling IMA.management to deploy the service
+[INFO] - [-] Exit SRO.
+[INFO] - 127.0.0.1 - - [24/Sep/2019 12:39:32] "GET /bye HTTP/1.1" 200 -

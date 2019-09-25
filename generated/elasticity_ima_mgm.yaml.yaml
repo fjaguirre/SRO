@@ -8,5 +8,5 @@ slices:
       - VIM: KUBERNETES
         commands:
         - REPLICAS="$(kubectl get pods -l name=iotagent-mosca -n dojot --no-headers | wc -l)"; kubectl scale deployment iotagent-mosca --replicas $((REPLICAS+=1)) -n dojot
-        name: k8s-master-1-5-105
+        name: k8s-master-1-5-113
         namespace: dojot

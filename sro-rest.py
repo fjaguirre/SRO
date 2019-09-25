@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 #########################################################################################
 ### Error handlers ######################################################################
+# 24:16.......43:00
 
 @app.errorhandler(400)
 def bad_request(error):
@@ -163,20 +164,20 @@ def deploy_service():
     ima_mgm_content = copy.deepcopy(content)
     ima_mon_content = copy.deepcopy(content)
     # Call left side of IMA to deploy the service
-    # ima_time = time.time()
-    # result_ima_mgm, message_ima_mgm = SRO.deploy_service(ima_mgm_content)
-    # SRO.save_times(slice_id, f'   - IMA.management: {(time.time()-ima_time)*1000} ms.')
-    # if result_ima_mgm != 200:
-    #     logger.error(f'    [X] Management part of IMA failed"')
-    #     return abort(502, f'Management part of IMA failed: {message_ima_mgm}')
+    ima_time = time.time()
+    result_ima_mgm, message_ima_mgm = SRO.deploy_service(ima_mgm_content)
+    SRO.save_times(slice_id, f'   - IMA.management: {(time.time()-ima_time)*1000} ms.')
+    if result_ima_mgm != 200:
+        logger.error(f'    [X] Management part of IMA failed"')
+        return abort(502, f'Management part of IMA failed: {message_ima_mgm}')
     # Call right side of IMA to start monitoring services
-    # ima_time = time.time()
-    # result_ima_mon, message_ima_mon = SRO.monitor_service(ima_mon_content)
-    # SRO.save_times(slice_id, f'   - IMA.monitoring: {(time.time()-ima_time)*1000} ms.')
-    # if result_ima_mon != 201:
-    #     logger.error(f'    [X] Monitoring part of IMA failed"')
-    #     return abort(502, f'Monitoring part of IMA failed: {message_ima_mon}')
-    # logger.info(f"    [-] The requested services are running and monitored")
+    ima_time = time.time()
+    result_ima_mon, message_ima_mon = SRO.monitor_service(ima_mon_content)
+    SRO.save_times(slice_id, f'   - IMA.monitoring: {(time.time()-ima_time)*1000} ms.')
+    if result_ima_mon != 201:
+        logger.error(f'    [X] Monitoring part of IMA failed"')
+        return abort(502, f'Monitoring part of IMA failed: {message_ima_mon}')
+    logger.info(f"    [-] The requested services are running and monitored")
     # Elasticity
     elasticity_time = time.time()
     need_elasticity = SRO.save_elasticity_rules(elasticity_content)
