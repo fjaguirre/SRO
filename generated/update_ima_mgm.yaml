@@ -1,0 +1,30 @@
+slice:
+  id: IoTService_sliced
+  slice-parts:
+  - dc-slice-part:
+      name: dc-slice3
+      VIM:
+        name: KUBERNETES
+        vdus:
+        - vdu:
+            description: Master (controller) of kubernetes cluster
+            id: k8s-master-a-b-c
+            ip: a.b.c.d
+            name: k8s-master-a-b-c
+            type: master
+            vdu-image: k8s-dojot-template
+        - vdu:
+            description: Compute node of kubernetes cluster
+            id: k8s-node-x-y-z
+            ip: w.x.y.z
+            name: k8s-node-x-y-z
+            type: worker
+            vdu-image: k8s-dojot-min-template
+        vim-credential:
+          password-ssh: necos
+          user-ssh: root
+        vim-ref:
+          ip-api: x.x.x.x
+          ip-ssh: x.x.x.x
+          port-api: 99999
+          port-ssh: 99999

@@ -1,0 +1,38 @@
+slice:
+  description: Slicing for Elastic IoT Service
+  id: IoTService_sliced
+  name: IoTService_sliced
+  short-name: IoTService_sliced
+  slice-parts:
+  - dc-slice-part:
+      dc-slice-part-id:
+        slice-controller-id: 6
+        slice-part-uuid: 113
+      monitoring-parameters:
+        granularity-secs: 10
+        measurements-db-ip: w.x.y.z
+        measurements-db-port: 99999
+        metrics:
+        - metric:
+            name: PERCENT_CPU_UTILIZATION
+        - metric:
+            name: MEGABYTES_MEMORY_UTILIZATION
+        - metric:
+            name: TOTAL_BYTES_DISK_IN
+        - metric:
+            name: TOTAL_BYTES_DISK_OUT
+        - metric:
+            name: TOTAL_BYTES_NET_RX
+        - metric:
+            name: TOTAL_BYTES_NET_TX
+        tool: prometheus
+        type: host
+      name: dc-slice3
+      type: EDGE
+  slice-timeframe:
+    service-start-time:
+      '100919': 10 pm
+    service-stop-time:
+      '101019': 10 pm
+  vendor: dojot
+  version: '1.0'

@@ -10,7 +10,6 @@ app = Flask(__name__)
 
 #########################################################################################
 ### Error handlers ######################################################################
-# 24:16.......43:00
 
 @app.errorhandler(400)
 def bad_request(error):
@@ -207,6 +206,13 @@ def slice_decommission():
     result, message = SRO.delete_slice(slice_id)
     SRO.save_times(slice_id, f'[-] Total time for slice decommission: {(time.time()-decommission_start_time)*1000} ms.')
     return jsonify(message), result
+
+def start_elasticity():
+    slices = get_slices_json()[0]['slices']
+    for Slice in slices:
+        
+    if need_elasticity:
+        elasticity.start(elasticity_content['slices']['sliced']['id'])
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=sro_port, debug=True, use_reloader=False)
